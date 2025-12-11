@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa - Pelusa Orbital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="index.html">Pelusa Orbital</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="empresa.html" class="active">Empresa</a></li>
+                <li><a href="particulares.html">Particulares</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Servicios para Empresas</h2>
+            <p>Soluciones creativas para tu marca y proyectos editoriales.</p>
+        </section>
+
+        <nav class="sub-nav">
+            <ul>
+                <li><a href="#diseno">Diseño Gráfico</a></li>
+                <li><a href="#maquetacion">Maquetación</a></li>
+                <li><a href="#ilustracion">Ilustración Editorial</a></li>
+            </ul>
+        </nav>
+
+        <section id="diseno" class="service-section">
+            <h3>Diseño Gráfico</h3>
+            <p>Identidad corporativa, branding y material publicitario.</p>
+            <!-- Content for Graphic Design -->
+        </section>
+
+        <section id="maquetacion" class="service-section">
+            <h3>Maquetación</h3>
+            <p>Diseño y estructura de libros, revistas y catálogos.</p>
+            <!-- Content for Layout -->
+        </section>
+
+        <section id="ilustracion" class="service-section">
+            <h3>Ilustración Editorial</h3>
+            <p>Ilustraciones que dan vida a tus textos.</p>
+            <!-- Content for Editorial Illustration -->
+        </section>
+
+        <section class="gallery">
+            <h3>Trabajos Destacados - Empresa</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item"><div class="placeholder">Trabajo Empresa 1</div></div>
+                <div class="gallery-item"><div class="placeholder">Trabajo Empresa 2</div></div>
+                <div class="gallery-item"><div class="placeholder">Trabajo Empresa 3</div></div>
+                <div class="gallery-item"><div class="placeholder">Trabajo Empresa 4</div></div>
+                <div class="gallery-item"><div class="placeholder">Trabajo Empresa 5</div></div>
+                <div class="gallery-item"><div class="placeholder">Trabajo Empresa 6</div></div>
+                <div class="gallery-item"><div class="placeholder">Trabajo Empresa 7</div></div>
+                <div class="gallery-item"><div class="placeholder">Trabajo Empresa 8</div></div>
+                <div class="gallery-item"><div class="placeholder">Trabajo Empresa 9</div></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pelusa Orbital. Todos los derechos reservados.</p>
+        <button onclick="localStorage.clear(); sessionStorage.clear(); window.name=''; location.reload();" style="font-size: 0.7rem; opacity: 0.5; margin-top: 1rem;">Reset Debug</button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

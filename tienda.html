@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Pelusa Orbital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="index.html">Pelusa Orbital</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="empresa.html">Empresa</a></li>
+                <li><a href="particulares.html">Particulares</a></li>
+                <li><a href="tienda.html" class="active">Tienda</a></li>
+                <li><a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Tienda Online</h2>
+            <p>Llévate un pedazo del universo Pelusa Orbital a casa.</p>
+        </section>
+
+        <nav class="sub-nav">
+            <ul>
+                <li><a href="#ilustraciones">Ilustraciones</a></li>
+                <li><a href="#retratos">Retratos</a></li>
+                <li><a href="#caricaturas">Caricaturas</a></li>
+                <li><a href="#decoracion">Decoración</a></li>
+            </ul>
+        </nav>
+
+        <section id="ilustraciones" class="service-section">
+            <h3>Ilustraciones</h3>
+            <p>Obras originales y láminas de alta calidad.</p>
+            <div class="gallery-grid">
+                <!-- Products with data attributes for JS -->
+                <div class="gallery-item product-item" data-id="1" data-title="Ilustración Cósmica" data-price="20">
+                    <div class="placeholder">Ilustración 1</div>
+                    <div class="product-info">
+                        <h4>Ilustración Cósmica</h4>
+                        <p>Desde 20€</p>
+                    </div>
+                </div>
+                <div class="gallery-item product-item" data-id="2" data-title="Sueños de Papel" data-price="25">
+                    <div class="placeholder">Ilustración 2</div>
+                    <div class="product-info">
+                        <h4>Sueños de Papel</h4>
+                        <p>Desde 25€</p>
+                    </div>
+                </div>
+                <div class="gallery-item product-item" data-id="3" data-title="Bosque Encantado" data-price="22">
+                    <div class="placeholder">Ilustración 3</div>
+                    <div class="product-info">
+                        <h4>Bosque Encantado</h4>
+                        <p>Desde 22€</p>
+                    </div>
+                </div>
+                <div class="gallery-item product-item" data-id="4" data-title="Ciudad Flotante" data-price="30">
+                    <div class="placeholder">Ilustración 4</div>
+                    <div class="product-info">
+                        <h4>Ciudad Flotante</h4>
+                        <p>Desde 30€</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="retratos" class="service-section">
+            <h3>Retratos</h3>
+            <p>Encarga tu retrato personalizado.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item"><div class="placeholder">Retrato Muestra 1</div></div>
+                <div class="gallery-item"><div class="placeholder">Retrato Muestra 2</div></div>
+            </div>
+        </section>
+
+        <section id="caricaturas" class="service-section">
+            <h3>Caricaturas</h3>
+            <p>Diversión asegurada.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item"><div class="placeholder">Caricatura Muestra 1</div></div>
+                <div class="gallery-item"><div class="placeholder">Caricatura Muestra 2</div></div>
+            </div>
+        </section>
+
+        <section id="decoracion" class="service-section">
+            <h3>Decoración</h3>
+            <p>Detalles para tu hogar.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item"><div class="placeholder">Decoración 1</div></div>
+                <div class="gallery-item"><div class="placeholder">Decoración 2</div></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <div class="placeholder" id="modal-img-placeholder">Imagen</div>
+                </div>
+                <div class="modal-details">
+                    <h3 id="modal-title">Título del Producto</h3>
+                    <p id="modal-base-price">Precio base: 20€</p>
+                    
+                    <div class="form-group">
+                        <label for="size-select">Tamaño:</label>
+                        <select id="size-select">
+                            <option value="A4" data-multiplier="1">A4</option>
+                            <option value="A3" data-multiplier="1.5">A3 (+50%)</option>
+                            <option value="A2" data-multiplier="2">A2 (+100%)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="paper-select">Tipo de Papel:</label>
+                        <select id="paper-select">
+                            <option value="Mate" data-extra="0">Mate (Estándar)</option>
+                            <option value="Brillo" data-extra="2">Brillo (+2€)</option>
+                            <option value="Acuarela" data-extra="5">Papel Acuarela (+5€)</option>
+                        </select>
+                    </div>
+
+                    <div class="price-display">
+                        Total: <span id="modal-total-price">20</span>€
+                    </div>
+
+                    <button id="add-to-cart-btn" class="btn-primary">Añadir al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Pelusa Orbital. Todos los derechos reservados.</p>
+        <button onclick="localStorage.clear(); sessionStorage.clear(); window.name=''; location.reload();" style="font-size: 0.7rem; opacity: 0.5; margin-top: 1rem;">Reset Debug</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
